@@ -3,26 +3,25 @@ const API = "https://api.github.com/users/";
 const app = Vue.createApp({
     data() {
         return {
-            search: null,
-            result: null,
-            error: null
+            search: null, // Variable para almacenar la búsqueda del usuario
+            result: null, // Variable para almacenar los datos del usuario encontrado
+            error: null // Variable para almacenar cualquier error ocurrido durante la búsqueda
         };
     },
     methods: {
         async doSearch() {
-            this.result = this.error = null
+            this.result = this.error = null // Reinicia los resultados y errores en cada nueva búsqueda
 
             try {
-                const response = await fetch(API + this.search)
-                if (!response.ok) throw new Error("Usuario No Encontrado")
-                const data = await response.json()
-                console.log(data)
-                this.result = data
+                const response = await fetch(API + this.search) // Realiza una solicitud para obtener los datos del usuario
+                if (!response.ok) throw new Error("Usuario No Encontrado") // Lanza un error si la solicitud no fue exitosa
+                const data = await response.json() // Convierte la respuesta en formato JSON
+                this.result = data // Almacena los datos del usuario encontrado
 
             } catch (error) {
-                this.error = error
+                this.error = error // Captura cualquier error ocurrido durante la búsqueda y lo almacena
             } finally {
-                this.search = null
+                this.search = null // Reinicia el campo de búsqueda después de cada búsqueda, independientemente del resultado
             }
         }
     }

@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buscador de Usuarios GitHub</title>
-    <link rel="stylesheet" href="css/main.css">
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="css/main.css"> <!-- Enlace al archivo de estilos CSS -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> <!-- Inclusión de Vue.js desde CDN -->
 </head>
 
 <body>
     <div id="app">
 
         <!-- Favoritos -->
-        <div class="favorites">
+        <div class="favorites"> <!-- Contenedor de favoritos -->
         </div>
 
         <!-- Contenido -->
@@ -22,30 +22,30 @@
             <h1 class="content__title">Buscador de Usuarios GitHub</h1>
 
             <!-- Buscador -->
-            <form class="search" v-on:submit.prevent="doSearch">
+            <form class="search" v-on:submit.prevent="doSearch"> <!-- Formulario de búsqueda -->
                 <input v-model="search" type="text" class="search__input" required
-                    placeholder="Ingrese un Usuario de GitHub">
-                <input type="submit" class="search__submit" value="Buscar">
+                    placeholder="Ingrese un Usuario de GitHub"> <!-- Campo de entrada para la búsqueda -->
+                <input type="submit" class="search__submit" value="Buscar"> <!-- Botón para iniciar la búsqueda -->
             </form>
 
             <!-- Resultado -->
-            <div class="result" v-if="result">
-                <h2 class="result__name">{{ result.name }}</h2>
-                <img v-bind:src="result.avatar_url" :alt="result.name" class="result__avatar">
+            <div class="result" v-if="result"> <!-- Se muestra si hay un resultado -->
+                <h2 class="result__name">{{ result.name }}</h2> <!-- Nombre del usuario encontrado -->
+                <img v-bind:src="result.avatar_url" :alt="result.name" class="result__avatar"> <!-- Avatar del usuario -->
                 <p class="result__bio">{{ result.bio }}<br>
                     <a v-bind:href="result.blog" target="_blank" class="result__blog">{{ result.blog }}</a>
-                </p>
+                </p> <!-- Biografía y enlace al blog del usuario -->
             </div>
-            <p v-else>Eserando para buscar...</p>
+            <p v-else>Eserando para buscar...</p> <!-- Se muestra mientras se espera la búsqueda -->
 
             <!-- Error -->
-            <div class="result__error" v-if="error">{{ error }}</div>
+            <div class="result__error" v-if="error">{{ error }}</div> <!-- Se muestra si hay un error -->
         </article>
     </div>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js"></script> <!-- Inclusión del archivo JavaScript -->
     <script>
-        const mountedApp = app.mount("#app")
+        const mountedApp = app.mount("#app") // Montaje de la aplicación Vue.js en el elemento con id "app"
     </script>
 </body>
 

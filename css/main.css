@@ -1,149 +1,147 @@
 /* General */
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; /* Establece el modelo de caja para todos los elementos */
 }
 
 html,
 body {
-  height: 100%;
+  height: 100%; /* Hace que el HTML y el cuerpo ocupen toda la altura de la ventana */
 }
 
 body {
-  font-family: sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #c9306b;
-  font-size: 1.3rem;
+  font-family: sans-serif; /* Establece la familia de fuentes predeterminada para el cuerpo */
+  display: flex; /* Usa el modelo de caja flexible para el cuerpo */
+  justify-content: center; /* Centra horizontalmente los elementos hijos */
+  align-items: center; /* Centra verticalmente los elementos hijos */
+  background-color: #c9306b; /* Color de fondo */
+  font-size: 1.3rem; /* Tamaño de fuente */
 }
 
 /* Contenido */
 .content {
-  background-color: lightgrey;
-  width: 768px;
-  max-width: 768px;
-  padding: 3rem;
-  box-shadow: 2px 2px 3px gray;
-  border-radius: 1rem;
+  background-color: lightgrey; /* Color de fondo del contenido */
+  width: 768px; /* Ancho del contenido */
+  max-width: 768px; /* Ancho máximo del contenido */
+  padding: 3rem; /* Espaciado interno del contenido */
+  box-shadow: 2px 2px 3px gray; /* Sombra */
+  border-radius: 1rem; /* Radio de borde */
 }
 
 .content__title {
-  margin: 1rem;
-  text-align: center;
+  margin: 1rem; /* Margen del título del contenido */
+  text-align: center; /* Alineación del texto del título */
 }
 
 /* Buscador */
 .search {
-  display: flex;
-  margin-bottom: 2.5rem;
+  display: flex; /* Usa el modelo de caja flexible para el formulario de búsqueda */
+  margin-bottom: 2.5rem; /* Margen inferior del formulario de búsqueda */
 }
 
 .search__input {
-  flex: 1;
-  padding: 1rem;
-  font-size: 1rem;
+  flex: 1; /* Hace que el campo de entrada del formulario de búsqueda se expanda para ocupar todo el espacio disponible */
+  padding: 1rem; /* Espaciado interno del campo de entrada */
+  font-size: 1rem; /* Tamaño de fuente del campo de entrada */
 }
 
 /* Resultado */
 .result {
-  position: relative;
-  background-color: #4dab8c;
-  border-radius: 0.3rem;
-  box-shadow: 2px 2px 3px gray;
-  color: white;
-  padding: 2.5rem;
-  display: grid;
-  gap: 1rem;
-  grid-template-areas:
-    "name name"
-    "avatar bio";
+  position: relative; /* Posicionamiento relativo del resultado */
+  background-color: #4dab8c; /* Color de fondo del resultado */
+  border-radius: 0.3rem; /* Radio de borde del resultado */
+  box-shadow: 2px 2px 3px gray; /* Sombra */
+  color: white; /* Color del texto del resultado */
+  padding: 2.5rem; /* Espaciado interno del resultado */
+  display: grid; /* Usa el modelo de caja de cuadrícula para el resultado */
+  gap: 1rem; /* Espacio entre elementos del resultado */
+  grid-template-areas: "name name" "avatar bio"; /* Plantilla de cuadrícula del resultado */
 }
 
 .result__toggle-favorite {
-  position: absolute;
-  top: 0.3rem;
-  right: 0.3rem;
-  border: none;
-  color: white;
-  text-decoration: none;
-  padding: 0.4rem;
+  position: absolute; /* Posicionamiento absoluto del botón de alternar favorito */
+  top: 0.3rem; /* Posicionamiento superior del botón de alternar favorito */
+  right: 0.3rem; /* Posicionamiento derecho del botón de alternar favorito */
+  border: none; /* Sin borde en el botón de alternar favorito */
+  color: white; /* Color del texto del botón de alternar favorito */
+  text-decoration: none; /* Sin decoración de texto en el botón de alternar favorito */
+  padding: 0.4rem; /* Espaciado interno del botón de alternar favorito */
 }
 
 .result__name {
-  grid-area: name;
-  margin: 0.4rem 0;
+  grid-area: name; /* Área de cuadrícula del nombre del resultado */
+  margin: 0.4rem 0; /* Margen del nombre del resultado */
 }
 
 .result__avatar {
-  grid-area: avatar;
-  max-width: 6rem;
-  height: auto;
-  border-radius: 1rem;
+  grid-area: avatar; /* Área de cuadrícula del avatar del resultado */
+  max-width: 6rem; /* Ancho máximo del avatar del resultado */
+  height: auto; /* Altura automática del avatar del resultado */
+  border-radius: 1rem; /* Radio de borde del avatar del resultado */
 }
 
 .result__bio {
-  grid-area: bio;
-  margin: 0;
+  grid-area: bio; /* Área de cuadrícula de la biografía del resultado */
+  margin: 0; /* Margen de la biografía del resultado */
 }
 
 .result__blog {
-  grid-area: blog;
-  color: #542638;
+  grid-area: blog; /* Área de cuadrícula del blog del resultado */
+  color: #542638; /* Color del texto del blog del resultado */
 }
 
 .result__error {
-  padding: 0.3rem;
-  background-color: red;
-  color: white;
-  text-align: center;
-  border: 1px solid red;
+  padding: 0.3rem; /* Espaciado interno del mensaje de error del resultado */
+  background-color: red; /* Color de fondo del mensaje de error del resultado */
+  color: white; /* Color del texto del mensaje de error del resultado */
+  text-align: center; /* Alineación del texto del mensaje de error del resultado */
+  border: 1px solid red; /* Borde del mensaje de error del resultado */
 }
 
 /* Favoritos */
 .favorites {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
+  position: fixed; /* Posicionamiento fijo de los favoritos */
+  top: 0; /* Posicionamiento superior de los favoritos */
+  left: 0; /* Posicionamiento izquierdo de los favoritos */
+  width: 100%; /* Ancho de los favoritos */
+  display: flex; /* Usa el modelo de caja flexible para los favoritos */
 }
 
 .favorite {
-  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out; /* Transición de transformación de los elementos favoritos */
 }
 
 .favorite__avatar {
-  height: 5rem;
-  margin: 0.3rem;
+  height: 5rem; /* Altura del avatar de los favoritos */
+  margin: 0.3rem; /* Margen del avatar de los favoritos */
 }
 
 .favorite--selected {
-  transform: scale(1.3);
+  transform: scale(1.3); /* Escala del elemento favorito seleccionado */
 }
 
 /* Transiciones */
 .v-enter-active,
 .v-leave-active {
-  transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease; /* Transición de opacidad para elementos Vue activos */
 }
 
 .v-enter-from,
 .v-leave-to {
-  opacity: 0;
+  opacity: 0; /* Opacidad de elementos Vue entrantes o salientes */
 }
 
 .list-move,
 .list-enter-active,
 .list-leave-active {
-  transition: all 0.5s ease;
+  transition: all 0.5s ease; /* Transición para elementos de lista Vue */
 }
 
 .list-enter-from,
 .list-leave-to {
-  opacity: 0;
-  transform: translateX(30px);
+  opacity: 0; /* Opacidad de elementos Vue entrantes o salientes en listas */
+  transform: translateX(30px); /* Transformación de desplazamiento horizontal de elementos Vue entrantes o salientes en listas */
 }
 
 .list-leave-active {
-  position: absolute;
+  position: absolute; /* Posicionamiento absoluto de elementos Vue salientes en listas */
 }
