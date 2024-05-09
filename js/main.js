@@ -1,7 +1,5 @@
 const API = "https://api.github.com/users/";
 
-
-
 const app = Vue.createApp({
     data() {
         return {
@@ -12,9 +10,7 @@ const app = Vue.createApp({
     },
     methods: {
         async doSearch() {
-
             this.result = this.error = null
-
 
             try {
                 const response = await fetch(API + this.search)
@@ -31,4 +27,3 @@ const app = Vue.createApp({
         }
     }
 })
-

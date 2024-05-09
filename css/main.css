@@ -13,11 +13,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: darkslateblue;
+  background-color: #c9306b;
   font-size: 1.3rem;
 }
 
-/* Content */
+/* Contenido */
 .content {
   background-color: lightgrey;
   width: 768px;
@@ -32,7 +32,7 @@ body {
   text-align: center;
 }
 
-/* Search */
+/* Buscador */
 .search {
   display: flex;
   margin-bottom: 2.5rem;
@@ -44,10 +44,10 @@ body {
   font-size: 1rem;
 }
 
-/* Result */
+/* Resultado */
 .result {
   position: relative;
-  background-color: purple;
+  background-color: #4dab8c;
   border-radius: 0.3rem;
   box-shadow: 2px 2px 3px gray;
   color: white;
@@ -88,18 +88,18 @@ body {
 
 .result__blog {
   grid-area: blog;
-  color: goldenrod;
+  color: #542638;
 }
 
 .result__error {
   padding: 0.3rem;
-  background-color: tomato;
+  background-color: red;
   color: white;
   text-align: center;
   border: 1px solid red;
 }
 
-/* Favorites */
+/* Favoritos */
 .favorites {
   position: fixed;
   top: 0;
@@ -121,7 +121,7 @@ body {
   transform: scale(1.3);
 }
 
-/* Transitions */
+/* Transiciones */
 .v-enter-active,
 .v-leave-active {
   transition: opacity 0.5s ease;
@@ -132,7 +132,7 @@ body {
   opacity: 0;
 }
 
-.list-move, /* apply transition to moving elements */
+.list-move,
 .list-enter-active,
 .list-leave-active {
   transition: all 0.5s ease;
@@ -144,8 +144,6 @@ body {
   transform: translateX(30px);
 }
 
-/* ensure leaving items are taken out of layout flow so that moving
-   animations can be calculated correctly. */
 .list-leave-active {
   position: absolute;
 }

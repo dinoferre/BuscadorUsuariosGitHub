@@ -5,28 +5,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Search Users</title>
+    <title>Buscador de Usuarios GitHub</title>
     <link rel="stylesheet" href="css/main.css">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 
 <body>
     <div id="app">
-        <!-- Favorites -->
+
+        <!-- Favoritos -->
         <div class="favorites">
         </div>
 
-        <!-- Content -->
+        <!-- Contenido -->
         <article class="content">
             <h1 class="content__title">Buscador de Usuarios GitHub</h1>
 
-            <!-- Search -->
+            <!-- Buscador -->
             <form class="search" v-on:submit.prevent="doSearch">
-                <input v-model="search" type="text" class="search__input" required placeholder="Ingrese un Usuario de GitHub">
-                <input type="submit" class="search__submit" value="Search">
+                <input v-model="search" type="text" class="search__input" required
+                    placeholder="Ingrese un Usuario de GitHub">
+                <input type="submit" class="search__submit" value="Buscar">
             </form>
 
-            <!-- Result -->
+            <!-- Resultado -->
             <div class="result" v-if="result">
                 <h2 class="result__name">{{ result.name }}</h2>
                 <img v-bind:src="result.avatar_url" :alt="result.name" class="result__avatar">
@@ -35,10 +37,12 @@
                 </p>
             </div>
             <p v-else>Eserando para buscar...</p>
+
             <!-- Error -->
             <div class="result__error" v-if="error">{{ error }}</div>
         </article>
     </div>
+
     <script src="js/main.js"></script>
     <script>
         const mountedApp = app.mount("#app")
