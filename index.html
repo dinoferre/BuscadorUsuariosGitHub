@@ -30,6 +30,8 @@
 
             <!-- Resultado -->
             <div class="result" v-if="result"> <!-- Se muestra si hay un resultado -->
+                <a v-if="isFavorite" href="#" class="result__toggle-favorite" @click="removeFavorite">Eliminar Favorito ⭐️</a>
+                <a v-else href="#" class="result__toggle-favorite" @click="addFavorite">Agregar Favorito ⭐️</a>                
                 <h2 class="result__name">{{ result.name }}</h2> <!-- Nombre del usuario encontrado -->
                 <img v-bind:src="result.avatar_url" :alt="result.name" class="result__avatar"> <!-- Avatar del usuario -->
                 <p class="result__bio">{{ result.bio }}<br>
