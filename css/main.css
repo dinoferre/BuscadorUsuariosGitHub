@@ -13,8 +13,11 @@ body {
   display: flex; /* Usa el modelo de caja flexible para el cuerpo */
   justify-content: center; /* Centra horizontalmente los elementos hijos */
   align-items: center; /* Centra verticalmente los elementos hijos */
-  background-color: #c9306b; /* Color de fondo */
+  /*background-color: #c9306b; /* Color de fondo */
   font-size: 1.3rem; /* Tamaño de fuente */
+  background: #00416A;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #E4E5E6, #00416A);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #E4E5E6, #00416A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 /* Contenido */
