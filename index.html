@@ -38,7 +38,7 @@
             </form>
 
             <!-- Resultado -->
-            <Transition>
+            <transition>
                 <div class="result" v-if="result"> <!-- Se muestra si hay un resultado -->
                     <a v-if="isFavorite" href="#" class="result__toggle-favorite" @click="removeFavorite">Eliminar
                         Favorito ⭐️</a>
@@ -50,17 +50,17 @@
                         <a v-bind:href="result.blog" target="_blank" class="result__blog">{{ result.blog }}</a>
                     </p> <!-- Biografía y enlace al blog del usuario -->
                 </div>
-            </Transition>
-            <p v-else>Eserando para buscar...</p> <!-- Se muestra mientras se espera la búsqueda -->
+            </transition>
+            <p v-else>Esperando para buscar...</p> <!-- Se muestra mientras se espera la búsqueda -->
 
             <!-- Error -->
-            <div class="result__error" v-if="error">{{ error }}</div> <!-- Se muestra si hay un error -->
+            <div class="result__error" v-if="error">{{ error.message }}</div> <!-- Se muestra si hay un error -->
         </article>
     </div>
 
     <script src="js/main.js"></script> <!-- Inclusión del archivo JavaScript -->
     <script>
-        const mountedApp = app.mount("#app") // Montaje de la aplicación Vue.js en el elemento con id "app"
+        const mountedApp = app.mount("#app"); // Montaje de la aplicación Vue.js en el elemento con id "app"
     </script>
 </body>
 
