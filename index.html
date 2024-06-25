@@ -50,8 +50,8 @@
                         <a v-bind:href="result.blog" target="_blank" class="result__blog">{{ result.blog }}</a>
                     </p> <!-- Biografía y enlace al blog del usuario -->
                 </div>
+                <p v-else>Esperando para buscar...</p> <!-- Se muestra mientras se espera la búsqueda -->
             </transition>
-            <p v-else>Esperando para buscar...</p> <!-- Se muestra mientras se espera la búsqueda -->
 
             <!-- Error -->
             <div class="result__error" v-if="error">{{ error.message }}</div> <!-- Se muestra si hay un error -->

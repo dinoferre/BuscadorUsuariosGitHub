@@ -20,8 +20,8 @@ body {
 /* Contenido */
 .content {
   background-color: lightgrey; /* Color de fondo del contenido */
-  width: 768px; /* Ancho del contenido */
-  max-width: 768px; /* Ancho máximo del contenido */
+  width: 568px; /* Ancho del contenido */
+  max-width: 568px; /* Ancho máximo del contenido */
   padding: 3rem; /* Espaciado interno del contenido */
   box-shadow: 2px 2px 3px gray; /* Sombra */
   border-radius: 1rem; /* Radio de borde */
