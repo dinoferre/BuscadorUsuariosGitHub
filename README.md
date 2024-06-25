@@ -16,9 +16,3 @@
 - **Transiciones:** Aplicación de transiciones Vue para crear efectos visuales suaves y mejorar la experiencia de usuario.
 - **Componentes:** Desarrollo de componentes Vue reutilizables para modularizar y organizar el código de la aplicación de manera eficiente.
 
-Dino Ferré 👽 - Link del proyecto 👇
-
-https://dinoferre.github.io/BuscadorUsuariosGitHub/
-
-
-Gracias ESCUELA VUE: https://escuelavue.es/
